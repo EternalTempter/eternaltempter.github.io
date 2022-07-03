@@ -1,0 +1,177 @@
+body{
+	width: 95vw;
+	/* height: 97vh; */
+	padding: 0;
+	margin: 0;
+	background-image: url(../IMG/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+.gameInfoWrap, .chooseModeWrap, .chooseTypeWrap, .chooseDifficultyWrap,  .serverModeWrap, .joinServerGameWrap, .chooseSize{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+}
+.gameInfoWrap h2, .chooseModeWrap h2, .chooseTypeWrap h2, .chooseDifficultyWrap h2,  .serverModeWrap h2, .joinServerGameWrap h2, .chooseSizeWrap h2{
+	font-size: 40px;
+	color: rgb(214, 235, 255);
+	text-align: center;
+	font-family: "Roboto";
+	font-weight: 700;
+}
+.instructions{
+	font-size: 16px;
+	font-family: "Roboto";
+	font-weight: 400;
+	color: aliceblue;
+}
+.gameId{
+	font-size: 18px;
+	font-family: "Roboto";
+	font-weight: 400;
+	color: aliceblue;
+	text-align: center;
+	margin-left: auto;
+}
+.gameInfoWrap input, .joinServerGameWrap input, .chooseSizeWrap input{
+	margin-top: 5vh;
+	background: transparent;
+	border:2px solid aliceblue;
+	color: aliceblue;
+	border-radius: 1vh;
+	width:14vw;
+	height: 5vh;
+}
+
+.chooseGameType, .chooseServerSetting, .chooseSizeWrap{
+	margin-top: 8vh;
+}
+.chooseGameType input, .chooseModeWrap input, .chooseTypeWrap input, .chooseDifficultyWrap input,  .serverModeWrap input, .joinServerGameWrap input, .afterWinChoose input{
+	transition: 0.8s;
+	width:18vw;
+	height: 7vh;
+	border: 3px solid rgb(214, 235, 255);
+	border-radius: 2vh;
+	margin-left:4vw;
+	background: transparent;
+	color: aliceblue;
+	cursor: pointer;
+	font-size: 14px;
+	font-family: "Roboto";
+	font-weight: 400;
+}
+.chooseGameType input:hover, .chooseModeWrap input:hover, .chooseTypeWrap input:hover, .chooseDifficultyWrap input:hover, .serverModeWrap input:hover, .joinServerGameWrap input:hover, .afterWinChoose input:hover{
+	transition: 0.8s;
+	border: 3px solid rgb(149, 192, 233);
+	color: rgb(149, 192, 233);
+}
+
+.opponentsLabel{
+	color: aliceblue;
+	text-align: center;
+	font-size: 2vw;
+}
+.opponentsField{
+	width: 29vw;
+	border: 1px solid black;
+	display: flex;
+	flex-wrap: wrap;
+	margin:5px;
+}
+.opponentsCard{
+	width: 3vw;
+	height: 3vh;
+	background-color: gray;
+	margin: 2.5px;
+}
+
+input[type="radio"] {
+	display:  none;
+}
+input[type="radio"]:checked ~ label {
+	color: red;
+}
+.hide{
+	visibility: hidden;
+}
+.off{
+	display: none;
+}	
+.playGround{
+	display: flex;
+}
+.playField{
+	width: 77vw;
+	margin-left: 14vw;
+}
+.closed{
+	filter: invert(50%);
+	transition: 0.5s;
+	transform: rotateY(180deg);
+}
+.opened{
+	filter: invert(0%);
+	transition: 0.5s;
+	transform: rotateY(0deg);
+}
+.bordered{
+	border:2px solid black;
+	margin:3px;
+}
+.size{
+	width: 9vh;
+	height:6vw;
+}
+.timer{
+	color: aliceblue;
+	margin-left: auto;
+	width: 15vw;
+	height: 8vh;
+	text-align: center;
+	line-height: 8vh;
+	border: 3px solid rgb(214, 235, 255);
+	border-radius: 15px;
+	font-size: 4vw;
+}
+.pointerEventOff{
+	pointer-events: none;
+}
+.afterGameInfo{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.afterGameInfo h1{
+	color: rgb(149, 192, 233);	
+}
+.afterGameInfo p{
+	color: aliceblue;
+}
+.scoreCount{
+	text-align: center;	
+	color: aliceblue;
+}
+.movesCount{
+	color: aliceblue;
+	text-align: center;
+}
+.error{
+	color: red;
+	text-align: center;
+}
+.recordsTable{
+	color: aliceblue;
+}
+.gameInfo{
+	margin-right: 2vw;
+}
+/* .afterWinChoose{
+	margin-left:19vw;
+} */

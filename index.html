@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Cards</title>
+</head>
+<body>
+	<div class="gameInfoWrap">
+		<h2>Игра "Карточки"</h2>
+		<div class="instructions">
+			<p>Перед началом игры нужно выбрать режим</p>
+			<p>Режимов два: с таймером обратного отсчета, подсчетом длительности раунда в секундах для таблицы рекордов</p>
+			<p>После вы указываете размер поля или уровень сложности (простой, средний, сложный)</p>
+			<p>Простой уровень: по умолчанию используется случайное количество до 6 пар карт и нужно находить одинаковые 2 карты</p>
+			<p>Средний уровень: по умолчанию используется случайное количество 10-30 троек карт и нужно найти одинаковые 3 карты</p>
+			<p>Сложный уровень: по умолчанию используется случайное количество 10-20 четверок карт и нужно найти одинаковые 4 карты</p>
+			<p>Количество карт выдается всегда случайно в заданном диапазоне</p>
+		</div>
+		<input type="input" placeholder="Введите ваше имя" class="inputPlayerName">
+		<div class="chooseGameType">
+			<input type="button" class="classicGameButton" value="Обычная игра" disabled> 
+			<input type="button" class="onlineGameButton" value="Онлайн игра" disabled> 
+		</div>
+	</div>
+	<div class="serverModeWrap off">
+		<h2>Создать / присоединиться к текущей игре</h2>
+		<div class="chooseServerSetting">
+			<input type="button" id="createServerGame" value="Создать свою игру">
+			<input type="button" id="joinServerGame" value="Присоединиться к существующей"> 
+		</div>
+	</div>
+	<div class="joinServerGameWrap off">
+		<h2>Введите идентификатор игры</h2>
+		<input type="text" id="inputId" placeholder="id игры">
+		<input type="button" id="joinGame" value="Присоединиться к игре" disabled>
+	</div>
+	<div class="chooseModeWrap off">
+		<h2>Выберите режим игры</h2>
+		<div class="chooseMode">
+			<input type="button" id="timerMode" value="Подсчет длительности раунда">
+			<input type="button" id="countdownMode" value="Таймер обратного отсчета">
+		</div>
+	</div>
+	<div class="chooseTypeWrap off">
+		<h2>Выберите количество карт, либо уровень сложности</h2>
+		<div class="chooseType">
+			<input type="button" id="sizeType" value="Выбрать размер">
+			<input type="button" id="difficultyType" value="Выбрать уровни сложности">
+		</div>
+	</div>
+	<div class="chooseSizeWrap off">
+		<h2>Выберите уровень сложности</h2>
+		<div class="chooseSize">
+			<input type="input" id="sizeInput" placeholder="Введите количество карточек">
+			<span class="error"></span>
+			<input type="button" id="sendSize" value="Начать!">
+		</div>
+	</div>
+		<div class="chooseDifficultyWrap off">
+			<h2>Выберите уровень сложности</h2>
+			<div class="chooseDifficulty">
+				<input type="button" id="easyDifficulty" value="Легкий">
+				<input type="button" id="mediumDifficulty" value="Средний">
+				<input type="button" id="hardDifficulty" value="Сложный">
+			</div>
+		</div>
+		<div class="chooseSizeWrap off">
+		</div>
+		<div class="playGround">
+			<div class="playField"></div>
+			<div class="gameInfo off">
+				<p class="timer">00:00</p>
+				<p class="movesCount"></p>
+				<p class="scoreCount"></p>
+				<p class="gameId"></p>
+				<p class="opponentsLabel off">Поле противника:</p>
+				<div class="opponentsField off">
+				</div>
+			</div>
+		</div>
+		<div class="afterGameInfo">
+		</div>
+		<div class="afterWinChoose off">
+			<input type="button" value="Играть снова" id="playAgain">
+			<input type="button" value="Смотреть таблицу рекордов" id="showRecordsTable">
+		</div>
+		<div class="recordsTable off">
+			<table cellpadding="10px" border="2px">
+				<thead>
+					<tr>	
+						<th id="easyLvlRecords">Легкий уровень</th>
+						<th id="mediumLvlRecords">Средний уровень</th>
+						<th id="hardLvlRecords">Сложный уровень</th>
+						<th id="userLvlRecords">Пользовательский уровень</th>
+					</tr>
+				</thead>
+				<tbody class="tbody">
+
+				</tbody>
+			</table>
+		</div>
+	<script src="js/script.js"></script>
+	<script src="js/generate.js"></script>
+</body>
+</html>
